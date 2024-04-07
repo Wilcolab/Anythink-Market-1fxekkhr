@@ -3,9 +3,9 @@ const mongoose = require("mongoose");
 const connection = process.env.MONGODB_URI;
 mongoose.connect(connection);
 
-const User = mongoose.model("../models/User.js");
-const Item = mongoose.model("../models/Item.js");
-const Comment = mongoose.model("../models/Comment.js");
+const User = mongoose.model("../models/User");
+const Item = mongoose.model("../models/Item");
+const Comment = mongoose.model("../models/Comment");
 
 async function seedDatabase() {
     for (let i = 0; i < 100; i++) {
